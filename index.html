@@ -2,267 +2,164 @@
 <html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
-<meta
-http-equiv="Content-Type"content="text/html;charset=utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>All In Cup - Menu</title>
-    <!-- استدعاء التنسيقات العالمية -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All In Cup - Visual Menu</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&display=swap" rel="stylesheet">
     <style>
-        body {
-            font-family: 'Cairo', sans-serif;
-            background-color: #000000;
-            color: #ffffff;
-            margin: 0;
-            padding: 0;
-            scroll-behavior: smooth;
-        }
-        .main-header {
-            background: linear-gradient(180deg, #ff8c00 0%, #000000 100%);
-            padding: 50px 20px;
-            text-align: center;
-        }
-        .logo-white {
-            width: 100px;
-            height: 100px;
-            background: #fff;
-            border-radius: 50%;
-            margin: 0 auto;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            color: #000;
-            border: 4px solid #000;
-            box-shadow: 0 10px 25px rgba(255, 140, 0, 0.4);
-        }
-        .menu-section {
-            background: #111111;
-            margin: 15px;
-            padding: 15px;
-            border-radius: 15px;
-            border-right: 6px solid #ff8c00;
-        }
-        .section-name {
-            color: #ff8c00;
-            font-size: 1.6rem;
-            font-weight: 900;
-            margin-bottom: 15px;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-        .food-item {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 10px 0;
-            border-bottom: 1px solid #222;
-        }
-        .food-item:last-child { border: none; }
-        .price-tag {
-            background: #ff8c00;
-            color: #000;
-            font-weight: 900;
-            padding: 2px 12px;
-            border-radius: 6px;
-            min-width: 50px;
-            text-align: center;
-        }
-        .final-footer {
-            background: #ff8c00;
-            color: #000;
-            padding: 40px 20px;
-            text-align: center;
-            border-radius: 40px 40px 0 0;
-            margin-top: 50px;
-        }
-        .phone-text {
-            font-size: 1.7rem;
-            font-weight: 900;
-            display: block;
-            margin: 5px 0;
-            letter-spacing: 1px;
-        }
-        .qr-white-bg {
-            background: white;
-            padding: 15px;
-            border-radius: 25px;
-            display: inline-block;
-            margin-top: 20px;
-            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
-        }
+        body { font-family: 'Cairo', sans-serif; background-color: #f4f6f8; color: #000; margin: 0; padding: 0; }
+        .main-header { background: linear-gradient(180deg, #ff8c00 0%, #f4f6f8 100%); padding: 50px 20px; text-align: center; }
+        .logo-container { width: 130px; height: 130px; background: #fff; border-radius: 50%; margin: 0 auto; display: flex; justify-content: center; align-items: center; border: 4px solid #fff; box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); overflow: hidden; }
+        .menu-section { background: #fff; margin: 15px; padding: 0; border-radius: 20px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.05); border-right: 6px solid #ff8c00; }
+        .section-header { position: relative; height: 140px; }
+        .section-header img { width: 100%; height: 100%; object-cover: cover; }
+        .section-overlay { position: absolute; bottom: 0; right: 0; left: 0; background: linear-gradient(0deg, rgba(0,0,0,0.7) 0%, transparent 100%); padding: 15px; }
+        .section-name { color: #fff; font-size: 1.5rem; font-weight: 900; }
+        .items-container { padding: 10px 15px; }
+        .item-row { display: flex; justify-content: space-between; align-items: center; padding: 12px 0; border-bottom: 1px solid #f0f0f0; }
+        .item-row:last-child { border-bottom: none; }
+        .item-name { font-weight: 700; color: #333; font-size: 1.05rem; }
+        .price-badge { background: #fff1e0; color: #ff8c00; font-weight: 900; padding: 4px 12px; border-radius: 10px; border: 1px solid #ffe0bd; font-size: 0.95rem; }
+        .footer-info { background: #fff; text-align: center; padding: 40px 20px; border-top: 4px solid #ff8c00; margin-top: 30px; }
+        .qr-box { background: #fff; padding: 10px; border-radius: 15px; display: inline-block; box-shadow: 0 4px 10px rgba(0,0,0,0.05); border: 1px solid #eee; margin-top: 20px; }
     </style>
 </head>
 <body>
 
-    <!-- الجزء العلوي -->
     <div class="main-header">
-        <div class="logo-white">
-            <span class="text-lg font-bold leading-none">All</span>
-            <span class="text-xs leading-none">In</span>
-            <span class="text-3xl font-black leading-none">CUP</span>
+        <div class="logo-container">
+            <img src="brand-image.png" alt="Logo" class="w-full h-full object-contain p-1">
         </div>
-        <h1 class="text-3xl font-black mt-4 text-white uppercase italic tracking-widest">MENU</h1>
-        <p class="font-bold text-black bg-white/70 inline-block px-4 py-1 rounded-full mt-3">واحة بدر - داخل جامعة بدر 📍</p>
+        <h1 class="text-2xl font-black mt-4 italic text-black">ALL IN CUP</h1>
+        <p class="font-bold text-black bg-white/80 inline-block px-4 py-1 rounded-full mt-2 text-xs">📍 واحة بدر - داخل جامعة بدر</p>
     </div>
 
-    <div class="max-w-2xl mx-auto">
+    <div class="max-w-xl mx-auto">
 
-        <!-- قسم الكريبات -->
         <div class="menu-section">
-            <h2 class="section-name">🌯 كريب</h2>
-            <div class="food-item"><span>بطاطس</span> <span class="price-tag">60</span></div>
-            <div class="food-item"><span>تشيكن كلاسيك</span> <span class="price-tag">100</span></div>
-            <div class="food-item"><span>تشيكن رانش</span> <span class="price-tag">110</span></div>
-<div class="food-item"><span>تشيكن باربيكيو</span> <span class="price-tag">110</span></div>
-            <div class="food-item"><span>تشيكن فاير</span> <span class="price-tag">110</span></div>
-            <div class="food-item"><span>تشيكن مكسيكي</span> <span class="price-tag">110</span></div>
-            <div class="food-item"><span>تشيكن شيش</span> <span class="price-tag">110</span></div>
-            <div class="food-item"><span>تشيكن مسحب</span> <span class="price-tag">110</span></div>
-            <div class="food-item"><span>برجر لحمة</span> <span class="price-tag">100</span></div>
-            <div class="food-item"><span>كفتة</span> <span class="price-tag">100</span></div>
-            <div class="food-item"><span>هوت دوج</span> <span class="price-tag">90</span></div>
-        </div>
-
-        <!-- ساندوتشات -->
-        <div class="menu-section">
-            <h2 class="section-name">🍔 ساندوتشات</h2>
-            <div class="food-item"><span>تشيكن كلاسيك</span> <span class="price-tag">90</span></div>
-            <div class="food-item"><span>تشيكن رانش</span> <span class="price-tag">100</span></div>
-            <div class="food-item"><span>تشيكن باربيكيو</span> <span class="price-tag">100</span></div>
-            <div class="food-item"><span>تشيكن فاير</span> <span class="price-tag">100</span></div>
-            <div class="food-item"><span>تشيكن مكسيكي</span> <span class="price-tag">100</span></div>
-            <div class="food-item"><span>تشيكن شيش</span> <span class="price-tag">100</span></div>
-            <div class="food-item"><span>تشيكن مسحب</span> <span class="price-tag">100</span></div>
-            <div class="food-item"><span>برجر لحمة</span> <span class="price-tag">90</span></div>
-            <div class="food-item"><span>كفتة</span> <span class="price-tag">90</span></div>
-            <div class="food-item"><span>هوت دوج</span> <span class="price-tag">80</span></div>
-        </div>
-
-        <!-- تورتيلا -->
-        <div class="menu-section">
-            <h2 class="section-name">🌮 تورتيلا</h2>
-            <div class="food-item"><span>تورتيلا بطاطس</span> <span class="price-tag">50</span></div>
-            <div class="food-item"><span>تورتيلا تشيكن</span> <span class="price-tag">100</span></div>
-            <div class="food-item"><span>تورتيلا مسحب</span> <span class="price-tag">100</span></div>
-            <div class="food-item"><span>تورتيلا شيش</span> <span class="price-tag">100</span></div>
-            <div class="food-item"><span>تورتيلا كفتة</span> <span class="price-tag">100</span></div>
-        </div>
-
-        <!-- باستا  -->
-        <div class="menu-section">
-            <h2 class="section-name">🍝 باستا </h2>
-            <div class="food-item"><span>وايت صوص</span> <span class="price-tag">50</span></div>
-            <div class="food-item"><span>ريد صوص</span> <span class="price-tag">50</span></div>
-            <div class="food-item"><span>ماك أند تشيز</span> <span class="price-tag">55</span></div>
-            <div class="food-item"><span>ماك رينو</span> <span class="price-tag">85</span></div>
-            <div class="food-item"><span>ماك نابولي</span> <span class="price-tag">85</span></div>
-            <div class="food-item"><span>ماك ريحانو</span> <span class="price-tag">85</span></div>
-            <div class="food-item"><span>ماك شيتوس</span> <span class="price-tag">60</span></div>
-            <div class="food-item"><span>باشميل</span> <span class="price-tag">90</span></div>
-            <div class="food-item"><span>نجريسكو</span> <span class="price-tag">90</span></div>
-        </div>
-
-        <!-- وجبات -->
-        <div class="menu-section">
-            <h2 class="section-name">🍽 وجبات</h2>
-            <div class="food-item"><span>وجبة استربس</span> <span class="price-tag">125</span></div>
-            <div class="food-item"><span>وجبة مسحب</span> <span class="price-tag">125</span></div>
-            <div class="food-item"><span>وجبة شيش</span> <span class="price-tag">125</span></div>
-            <div class="food-item"><span>وجبة كفته</span> <span class="price-tag">125</span></div>
-            <div class="food-item"><span>وجبة سجق</span> <span class="price-tag">110</span></div>
-            <div class="food-item"><span>وجبة فتة شاورمة</span> <span class="price-tag">110</span></div>
-        </div>
-
-        <!-- فطار وحلو -->
-        <div class="menu-section">
-            <h2 class="section-name">🥞 فطار وحلو</h2>
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-6">
-<div class="food-item"><span>جبنة خلطه</span> <span class="price-tag">15</span></div>
-                <div class="food-item"><span>جبنه رومي</span> <span class="price-tag">20</span></div>
-                <div class="food-item"><span>جبنه مكس</span> <span class="price-tag">20</span></div>
-                <div class="food-item"><span>بيتزا مكس</span> <span class="price-tag">20</span></div>
-                <div class="food-item"><span>بطاطس</span> <span class="price-tag">15</span></div>
-                <div class="food-item"><span>غنوج</span> <span class="price-tag">15</span></div>
-                <div class="food-item"><span>كب بطاطس</span> <span class="price-tag">40</span></div>
-                <div class="food-item"><span>كب اندومي</span> <span class="price-tag">25</span></div>
-                <div class="food-item"><span>مكس حلو</span> <span class="price-tag">20</span></div>
-                <div class="food-item"><span>وافل كلاسيك</span> <span class="price-tag">40</span></div>
-                <div class="food-item"><span>وافل شوكولاته</span> <span class="price-tag">50</span></div>
-                <div class="food-item"><span>وافل مكس</span> <span class="price-tag">50</span></div>
-                <div class="food-item"><span>سكلانس</span> <span class="price-tag">60</span></div>
+            <div class="section-header">
+                <img src="https://images.unsplash.com/photo-1519676867240-f03562e64548?auto=format&fit=crop&w=500&q=80" alt="كريب">
+                <div class="section-overlay"><span class="section-name">🌯 كريب</span></div>
+            </div>
+            <div class="items-container">
+                <div class="item-row"><span class="item-name">كريب بطاطس</span><span class="price-badge">70 ج</span></div>
+                <div class="item-row"><span class="item-name">تشيكن كلاسيك</span><span class="price-badge">110 ج</span></div>
+                <div class="item-row"><span class="item-name">تشيكن رانش</span><span class="price-badge">120 ج</span></div>
+                <div class="item-row"><span class="item-name">تشيكن باربيكيو</span><span class="price-badge">120 ج</span></div>
+                <div class="item-row"><span class="item-name">تشيكن فاير</span><span class="price-badge">120 ج</span></div>
+                <div class="item-row"><span class="item-name">تشيكن مكسيكي</span><span class="price-badge">120 ج</span></div>
+                <div class="item-row"><span class="item-name">تشيكن شيش</span><span class="price-badge">120 ج</span></div>
+                <div class="item-row"><span class="item-name">تشيكن مسحب</span><span class="price-badge">120 ج</span></div>
+                <div class="item-row"><span class="item-name">برجر لحمة</span><span class="price-badge">110 ج</span></div>
+                <div class="item-row"><span class="item-name">هوت دوج</span><span class="price-badge">100 ج</span></div>
             </div>
         </div>
 
-        <!-- مشروبات ساخنه -->
         <div class="menu-section">
-            <h2 class="section-name">☕ مشروبات ساخنه</h2>
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-6">
-                <div class="food-item"><span>قهوة تركي</span> <span class="price-tag">20</span></div>
-                <div class="food-item"><span>قهوة فرنساوي</span> <span class="price-tag">35</span></div>
-                <div class="food-item"><span>قهوة فليفر</span> <span class="price-tag">35</span></div>
-                <div class="food-item"><span>اسبريسو سنجل</span> <span class="price-tag">25</span></div>
-                <div class="food-item"><span>اسبريسو دبل</span> <span class="price-tag">35</span></div>
-                <div class="food-item"><span>مكياتو</span> <span class="price-tag">40</span></div>
-                <div class="food-item"><span>لاتيه</span> <span class="price-tag">45</span></div>
-                <div class="food-item"><span>كابتشينو كلاسيك</span> <span class="price-tag">40</span></div>
-                <div class="food-item"><span>كابتشينو فليفر</span> <span class="price-tag">45</span></div>
-                <div class="food-item"><span>نسكافيه كلاسيك</span> <span class="price-tag">30</span></div>
-                <div class="food-item"><span>نسكافيه ميلك</span> <span class="price-tag">45</span></div>
-                <div class="food-item"><span>نسكافيه فليفر</span> <span class="price-tag">45</span></div>
-                <div class="food-item"><span>شاي</span> <span class="price-tag">10</span></div>
-                <div class="food-item"><span>شاي كرك</span> <span class="price-tag">15</span></div>
-                <div class="food-item"><span>ابل سيدار</span> <span class="price-tag">35</span></div>
-                <div class="food-item"><span>هامر هيد</span> <span class="price-tag">45</span></div>
-                <div class="food-item"><span>هوت بوريو</span> <span class="price-tag">50</span></div>
-                <div class="food-item"><span>هوت شوكليت</span> <span class="price-tag">50</span></div>
+            <div class="section-header">
+                <img src="https://images.unsplash.com/photo-1626700051175-6818013e1d4f?auto=format&fit=crop&w=500&q=80" alt="سوري">
+                <div class="section-overlay"><span class="section-name">🌮 سوري</span></div>
+            </div>
+            <div class="items-container">
+                <div class="item-row"><span class="item-name">بطاطس سوري صغير</span><span class="price-badge">35 ج</span></div>
+                <div class="item-row"><span class="item-name">بطاطس سوري</span><span class="price-badge">60 ج</span></div>
+                <div class="item-row"><span class="item-name">تشيكن سوري</span><span class="price-badge">110 ج</span></div>
+                <div class="item-row"><span class="item-name">مسحب سوري</span><span class="price-badge">110 ج</span></div>
+                <div class="item-row"><span class="item-name">شيش سوري</span><span class="price-badge">110 ج</span></div>
             </div>
         </div>
 
-        <!-- مشروبات بارده -->
         <div class="menu-section">
-            <h2 class="section-name">🥤 مشروبات بارده</h2>
-                <div class="food-item"><span>كانز</span> <span class="price-tag">25</span></div>
-                <div class="food-item">تويست<span></span> <span class="price-tag">25</span></div>
-                <div class="food-item">ايس نسكافيه<span></span> <span class="price-tag">45</span></div>
-                <div class="food-item">ريد بول<span></span> <span class="price-tag">65</span></div>
-                <div class="food-item">ايس كوفي<span></span> <span class="price-tag">55</span></div>
-                <div class="food-item">ايس موكا<span></span> <span class="price-tag">55</span></div>
-                <div class="food-item">ميلك تشيك<span></span> <span class="price-tag">55</span></div>
-                <div class="food-item">ايس بوريو<span></span> <span class="price-tag">55</span></div>
-                <div class="food-item">ايس شوكليت<span></span> <span class="price-tag">55</span></div>
-                <div class="food-item">ليمون<span></span> <span class="price-tag">30</span></div>
-                <div class="food-item">ليمون نعناع<span></span> <span class="price-tag">35</span></div>
-                <div class="food-item">مانجو<span></span> <span class="price-tag">40</span></div>
-                <div class="food-item">موز حليب<span></span> <span class="price-tag">40</span></div>
-                <div class="food-item">فراوله<span></span> <span class="price-tag">40</span></div>
-                <div class="food-item">جوافه<span></span> <span class="price-tag">40</span></div>
-                <div class="food-item">موهيتو<span></span> <span class="price-tag">50</span></div>
-                <div class="food-item">مياه صغيره<span></span> <span class="price-tag">10</span></div>
+            <div class="section-header">
+                <img src="https://images.unsplash.com/photo-1543339494-b4cd4f7ba686?auto=format&fit=crop&w=500&q=60" alt="باستا">
+                <div class="section-overlay"><span class="section-name">🍝 باستا</span></div>
+            </div>
+            <div class="items-container">
+                <div class="item-row"><span class="item-name">ماك أند تشيز</span><span class="price-badge">55 ج</span></div>
+            </div>
+        </div>
+
+        <div class="menu-section">
+            <div class="section-header">
+                <img src="https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?q=80&w=500&auto=format&fit=crop" alt="وجبات">
+                <div class="section-overlay"><span class="section-name">🍽 وجبات</span></div>
+            </div>
+            <div class="items-container">
+                <div class="item-row"><span class="item-name">وجبة استربس</span><span class="price-badge">125 ج</span></div>
+                <div class="item-row"><span class="item-name">وجبة مسحب</span><span class="price-badge">125 ج</span></div>
+                <div class="item-row"><span class="item-name">وجبة شيش</span><span class="price-badge">125 ج</span></div>
+            </div>
+        </div>
+
+        <div class="menu-section">
+            <div class="section-header">
+                <img src="https://images.unsplash.com/photo-1533089860892-a7c6f0a88666?auto=format&fit=crop&w=500&q=80" alt="فطار وحلو">
+                <div class="section-overlay"><span class="section-name">🥞 فطار وحلو</span></div>
+            </div>
+            <div class="items-container">
+                <div class="item-row"><span class="item-name">جبنة خلطه</span><span class="price-badge">20 ج</span></div>
+                <div class="item-row"><span class="item-name">جبنه رومي</span><span class="price-badge">25 ج</span></div>
+                <div class="item-row"><span class="item-name">جبنه مكس</span><span class="price-badge">25 ج</span></div>
+                <div class="item-row"><span class="item-name">بطاطس</span><span class="price-badge">20 ج</span></div>
+                <div class="item-row"><span class="item-name">كب بطاطس</span><span class="price-badge">45 ج</span></div>
+                <div class="item-row"><span class="item-name">كب اندومي</span><span class="price-badge">30 ج</span></div>
+                <div class="item-row"><span class="item-name">وافل كلاسيك</span><span class="price-badge">45 ج</span></div>
+                <div class="item-row"><span class="item-name">وافل شوكولاته</span><span class="price-badge">55 ج</span></div>
+                <div class="item-row"><span class="item-name">وافل مكس</span><span class="price-badge">55 ج</span></div>
+                <div class="item-row"><span class="item-name">سكلانس</span><span class="price-badge">65 ج</span></div>
+            </div>
+        </div>
+
+        <div class="menu-section">
+            <div class="section-header">
+                <img src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?q=80&w=500&auto=format&fit=crop" alt="ساخن">
+                <div class="section-overlay"><span class="section-name">☕ مشروبات ساخنة</span></div>
+            </div>
+            <div class="items-container grid grid-cols-1 md:grid-cols-2 gap-x-4">
+                <div class="item-row"><span class="item-name">قهوة تركي</span><span class="price-badge">20 ج</span></div>
+                <div class="item-row"><span class="item-name">قهوة فرنساوي</span><span class="price-badge">35 ج</span></div>
+                <div class="item-row"><span class="item-name">قهوة فليفر</span><span class="price-badge">35 ج</span></div>
+                <div class="item-row"><span class="item-name">اسبريسو سنجل</span><span class="price-badge">25 ج</span></div>
+                <div class="item-row"><span class="item-name">اسبريسو دبل</span><span class="price-badge">35 ج</span></div>
+                <div class="item-row"><span class="item-name">مكياتو</span><span class="price-badge">40 ج</span></div>
+                <div class="item-row"><span class="item-name">لاتيه</span><span class="price-badge">45 ج</span></div>
+                <div class="item-row"><span class="item-name">كابتشينو كلاسيك</span><span class="price-badge">40 ج</span></div>
+                <div class="item-row"><span class="item-name">شاي</span><span class="price-badge">10 ج</span></div>
+                <div class="item-row"><span class="item-name">شاي كرك</span><span class="price-badge">15 ج</span></div>
+                <div class="item-row"><span class="item-name">هوت شوكليت</span><span class="price-badge">50 ج</span></div>
+                <div class="item-row"><span class="item-name">ابل سيدار</span><span class="price-badge">35 ج</span></div>
+            </div>
+        </div>
+
+        <div class="menu-section">
+            <div class="section-header">
+                <img src="https://images.unsplash.com/photo-1517701550927-30cf4ba1dba5?q=80&w=500&auto=format&fit=crop" alt="بارد">
+                <div class="section-overlay"><span class="section-name">🥤 مشروبات باردة</span></div>
+            </div>
+            <div class="items-container grid grid-cols-1 md:grid-cols-2 gap-x-4">
+                <div class="item-row"><span class="item-name">كانز</span><span class="price-badge">25 ج</span></div>
+                <div class="item-row"><span class="item-name">ريد بول</span><span class="price-badge">65 ج</span></div>
+                <div class="item-row"><span class="item-name">ايس كوفي</span><span class="price-badge">55 ج</span></div>
+                <div class="item-row"><span class="item-name">ايس موكا</span><span class="price-badge">55 ج</span></div>
+                <div class="item-row"><span class="item-name">ميلك تشيك</span><span class="price-badge">55 ج</span></div>
+                <div class="item-row"><span class="item-name">موهيتو</span><span class="price-badge">50 ج</span></div>
+                <div class="item-row"><span class="item-name">ليمون نعناع</span><span class="price-badge">35 ج</span></div>
+                <div class="item-row"><span class="item-name">مانجو</span><span class="price-badge">40 ج</span></div>
+                <div class="item-row"><span class="item-name">مياه صغيره</span><span class="price-badge">10 ج</span></div>
             </div>
         </div>
 
     </div>
 
-    <!-- تذييل الصفحة -->
-    <div class="final-footer">
-        <h3 class="text-xl font-black mb-3">للطلب والاستفسار</h3>
-        <span class="phone-text">01555936555</span>
-        <span class="phone-text">01210009806</span>
+    <div class="footer-info">
+        <h3 class="text-[#ff8c00] font-black text-xl mb-4">للطلب والاستفسار</h3>
+        <p class="text-2xl text-black font-black mb-1">01555936555</p>
+        <p class="text-2xl text-black font-black mb-6">01210009806</p>
         
-        <div class="mt-6">
-            <p class="font-bold text-sm opacity-80 mb-2">تابعنا على الفيسبوك لعروضنا</p>
-            <div class="qr-white-bg">
-                <!-- كود QR لصفحة الفيسبوك الأصلية للمطعم -->
-                <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://www.facebook.com/AllInCup" alt="FB Page QR" class="w-32 h-32">
-            </div>
+        <div class="qr-box">
+            <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://www.facebook.com/AllInCup" alt="QR Code" class="w-32 h-32">
         </div>
-        
-        <p class="mt-8 text-[10px] font-black italic uppercase opacity-50 tracking-widest text-black">
-            All In Cup - Official Digital Menu
-        </p>
+        <p class="mt-4 text-gray-500 font-bold">تابعونا على فيسبوك</p>
     </div>
 
 </body>
